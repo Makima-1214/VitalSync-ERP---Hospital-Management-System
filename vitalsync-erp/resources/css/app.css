@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; }
+}
+
+@layer components {
+  .live-dot { animation: pulse-dot 1.5s infinite; }
+  .triage-flash { animation: triage-flash 2s infinite; }
+}
+
+@layer utilities {
+  .font-mono-custom { font-family: 'DM Mono', monospace; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes triage-flash {
+  0%, 100% { background-color: #FFF5F5; }
+  50% { background-color: #FDE8E8; }
+}
